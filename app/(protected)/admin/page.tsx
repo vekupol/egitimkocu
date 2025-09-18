@@ -3,7 +3,7 @@ import Protected from "@/components/Protected";
 import { useEffect, useState } from "react";
 import { db } from "@/lib/firebase";
 import { collection, getDocs, updateDoc, doc } from "firebase/firestore";
-import type { Coach } from "@/types";
+import type { Coach } from "@/types/index";
 
 export default function AdminPage() {
   return (
