@@ -15,6 +15,7 @@ export default function AdminPage() {
 
 function Content() {
   const [items, setItems] = useState<Coach[]>([]);
+
   useEffect(() => {
     (async () => {
       const snap = await getDocs(collection(db, "coaches"));
@@ -42,11 +43,16 @@ function Content() {
             key={c.uid}
             className="rounded-xl border p-3 flex items-center justify-between"
           >
+            {/* Koç Bilgileri */}
             <div>
-              <b>{c.name}</b> — {c.branch} • {c.city}
+              <b>{c.name}</b>
+              {c.school && ` — ${c.school}`}
+              {c.city && ` • ${c.city}`}
               {c.premium && <span className="ml-2 text-xs">⭐</span>}{" "}
               {c.verified && <span className="text-xs">✔</span>}
             </div>
+
+            {/* Kontrol Butonları */}
             <div className="flex items-center gap-2">
               <button
                 className="rounded-lg border px-3 py-1"
