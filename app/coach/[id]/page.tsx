@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import { getCoach } from "@/lib/firestore";
-import type { Coach } from "@/types";
+import type { Coach } from "@/types/index";
 import Image from "next/image";
 
 export default function CoachDetailPage() {

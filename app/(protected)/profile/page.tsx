@@ -6,7 +6,7 @@ import UploadAvatar from "@/components/UploadAvatar";
 import CoachCard from "@/components/CoachCard";
 import ChipInput from "@/components/ChipInput";
 import { useEffect, useState } from "react";
-import type { Coach } from "@/types";
+import type { Coach } from "@/types/index";
 
 export default function ProfilePage() {
   return (

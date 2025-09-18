@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { listCoaches } from "@/lib/firestore";
-import type { Coach } from "@/types";
+import type { Coach } from "@/types/index";
 import CoachCard from "@/components/CoachCard";
 
 export default function CoachesPage() {
@@ -42,8 +42,13 @@ export default function CoachesPage() {
       );
     }
     if (mode !== "all") {
-      data = data.filter((c) => (mode === "online" ? c.online : !c.online));
+      data = data.filter((c) =>
+        mode === "online"
+          ? c.modes?.includes("online")
+          : c.modes?.includes("offline")
+      );
     }
+
     if (onlyVerified) {
       data = data.filter((c) => c.verified);
     }
