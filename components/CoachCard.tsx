@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import type { Coach } from "@/types";
+import type { Coach } from "@/types/index";
 import { motion } from "framer-motion";
 import Link from "next/link";
 

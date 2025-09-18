@@ -9,7 +9,7 @@ import {
   query,
   serverTimestamp,
 } from "firebase/firestore";
-import type { Coach } from "@/types";
+import type { Coach } from "@/types/index";
 
 /**
  * Tüm koçları getirir, users koleksiyonundaki premium/verified bilgilerini merge eder.
