@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { listCoaches } from "@/lib/firestore";
-import type { Coach } from "@/types";
+import type { Coach } from "@/types/index";
 import CoachCard from "@/components/CoachCard";
 
 export default function HomePage() {
