@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light dark;
+}
+body {
+  @apply bg-neutral-50 dark:bg-neutral-900 text-neutral-900 dark:text-neutral-100;
+}
+.container {
+  @apply mx-auto max-w-6xl px-4;
+}
